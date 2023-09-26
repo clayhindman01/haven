@@ -2,7 +2,7 @@
   flex-direction: row;
   padding: 20px;
   background-color: #f5f5f5;
-  border-bottom: 1px solid #ddd;
+  /* border-bottom: 1px solid #ddd; */
   display: flex;
   position: fixed;
   top: 0;
@@ -13,6 +13,7 @@
 
 .logo {
   font-size: large;
+  font-weight: bold;
 };
 
 
@@ -23,4 +24,58 @@
   width: 100%;
   overflow: hidden;
   background-color: red;
+}
+
+.container {
+  flex: 1;
+  background-color: forestgreen;
+  height: fit-content;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%
+}
+
+.homepageContainer {
+  background-image: url("../public/woods.jpg");
+  background-size: cover;
+  opacity: 0.9;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  flex-direction: column;
+}
+
+.homeText {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 50px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.aboutUsButton {
+  border: 1px solid white;
+  padding: 20px 25px;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.aboutUsButton:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+.aboutUsButton:hover a {
+  color: black;
+  cursor: pointer;
+}
+
+.aboutUsText {
+  text-decoration: none;
+  color: white;
+  font-size: 22px;
 }

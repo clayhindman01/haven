@@ -4,18 +4,19 @@ import { push as Menu } from "react-burger-menu";
 export default function Header() {
   return (
     <div>
-      <div className="header">
+      <div className="header" style={window.pageYOffset != '100vh'? {backgroundColor: 'transparent'}: null}>
         <div className="logo">
-          {/* TODO: REPLACE WITH LOGO */}
-          Haven
+          <p style={{color: "white", margin: 0, fontSize: 22}}>Haven Logo Placeholder</p>
         </div>
       </div>
       <div id="outer-container">
         <Menu
+          className="menu"
           styles={styles}
           right
           pageWrapId={"page-wrap"}
           outerContainerId={"outer-container"}
+          width={"fit-content"}
         >
           <a id="home" className="menu-item" href="/">
             Home
@@ -41,14 +42,15 @@ const styles = {
     top: "20px",
   },
   bmBurgerBars: {
-    background: "#373a47",
+    background: window.pageYOffset !== '100vh'? "white":"#373a47",
+    opacity: 0.8,
   },
   bmBurgerBarsHover: {
     background: "#a90000",
   },
   bmCrossButton: {
-    height: "24px",
-    width: "24px",
+    height: "30px",
+    width: "30px",
   },
   bmCross: {
     background: "#bdc3c7",
@@ -58,9 +60,11 @@ const styles = {
     height: "100%",
   },
   bmMenu: {
-    background: "#373a47",
-    padding: "2.5em 1.5em 0",
-    fontSize: "1.15em",
+    background: "#616665",
+    padding: "2.5em 2em 0",
+    fontSize: "1.3em",
+    flexDirection: "column",
+    overflow: "hidden",
   },
   bmMorphShape: {
     fill: "#373a47",
@@ -70,7 +74,15 @@ const styles = {
     padding: "0.8em",
   },
   bmItem: {
-    display: "inline-block",
+    display: "flex",
+    padding: 10,
+    color: 'white',
+    textDecoration: 'none',
+    fontSize: 20,
+    fontWeight: 600,
+  },
+  bmItemHover: {
+    color: "black",
   },
   bmOverlay: {
     background: "rgba(0, 0, 0, 0.3)",
