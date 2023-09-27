@@ -6,9 +6,11 @@ export default function Home() {
     <div className="container homepageContainer">
       <Header />
       <div className="center">
-        <p className="homeText">COME STAY WITH US</p>
+        <p className="homeText">BOOK YOUR STAY WITH US TODAY</p>
         <div className="aboutUsButton">
-          <a href="/about" className="aboutUsText">ABOUT US</a>
+          <a href="/about" className="aboutUsText">
+            ABOUT US
+          </a>
         </div>
       </div>
     </div>
