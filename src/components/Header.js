@@ -69,8 +69,8 @@ export default function Header({isHomepage}) {
       background: "rgba(255, 200, 255, 0.07)",
     },
     scrollColor: {
-      backgroundColor: "",
-      borderTop: "1px solid black",
+      backgroundColor: "white",
+      borderBottom: "1px solid lightgray",
     },
     headerLogoText: {
       margin: 0,

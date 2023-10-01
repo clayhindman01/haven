@@ -7,8 +7,7 @@ export default function Booking() {
     <>
     <Header isHomepage={false} />
     <div className="container bookingContainer">
-      <div className=" center">
-        {/* <h1>Booking</h1> */}
+      <div className="center">
         <Cabin cabinOne={true} />
         <Cabin cabinOne={false} />
       </div>
