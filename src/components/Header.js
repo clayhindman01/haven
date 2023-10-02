@@ -13,6 +13,10 @@ export default function Header({isHomepage}) {
     setScreenPosition(window.pageYOffset);
   };
 
+  const isSecondStyle = () => {
+    return (screenPosition <= height && isHomepage);
+  };
+
   const styles = {
     bmBurgerButton: {
       position: "fixed",
@@ -23,7 +27,7 @@ export default function Header({isHomepage}) {
       top: "20px",
     },
     bmBurgerBars: {
-      background: screenPosition <= height - 250 && isHomepage ? "white" : "#373a47",
+      background: isSecondStyle() ? "white" : "#373a47",
       opacity: 0.8,
     },
     bmBurgerBarsHover: {
@@ -66,7 +70,7 @@ export default function Header({isHomepage}) {
       color: "black",
     },
     bmOverlay: {
-      background: "rgba(255, 200, 255, 0.07)",
+      background: "rgba(255, 200, 255, 0.03 )",
     },
     scrollColor: {
       backgroundColor: "white",
@@ -94,19 +98,21 @@ export default function Header({isHomepage}) {
       <div
         className="header"
         style={
-          screenPosition <= height - 250 && isHomepage
+          isSecondStyle()
             ? { backgroundColor: "transparent" }
             : styles.scrollColor
         }
       >
         <div className="logo">
-          <a
+          <img src="logo.png" alt="logo" className={isSecondStyle() ? "logoImageSecondStyle" : "logoImage"} />
+          {!isSecondStyle() ? <a
             href="/"
             style={styles.headerLogoText}
-            className={screenPosition <= height - 250 && isHomepage ? "headerLogoTextWhite" : "headerLogoTextBlack"}
+            className={isSecondStyle() ? "headerLogoTextWhite" : "headerLogoTextBlack"}
             >
             Haven Logo Placeholder
-          </a>
+          </a>: null}
+          
         </div>
       </div>
       <div id="outer-container">

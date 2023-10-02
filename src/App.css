@@ -19,8 +19,10 @@ body {
 };
 
 .logo {
-  font-size: large;
-  font-weight: 400;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 };
 
 
@@ -30,7 +32,6 @@ body {
   height: 100vh;
   width: 100%;
   overflow: hidden;
-  background-color: red;
 }
 
 .container {
@@ -46,7 +47,10 @@ body {
 .homepageContainer {
   background-image: url("../public/woods.jpg");
   background-size: cover;
+  /* opacity: 0.95; */
   margin: 0;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid #4b5351;
 }
 
 .center {
@@ -160,4 +164,59 @@ body {
   align-items: flex-start;
   width: 50%;
   margin-left: 20px;
+}
+
+.logoImage {
+  height: 50px;
+  width: 50px;
+  margin-bottom: -15px;
+}
+.logoImageSecondStyle {
+  height: 80px;
+  width: 80px;
+  margin-bottom: -30px;
+}
+
+.homeAboutSectionContainer {
+  background-image: url(../public/paperBackground.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  padding: 20px;
+}
+
+.homeAboutSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 75%;
+  /* margin-top: 20px; */
+  background-color: transparent;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); */
+  border-bottom: #4b5351 1px solid;
+  border-radius: 1vh;
+}
+
+.homeAboutSectionHeader {
+  color: #94baa9;
+}
+
+.centerPhotos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+}
+
+.photoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
