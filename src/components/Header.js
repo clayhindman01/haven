@@ -70,7 +70,7 @@ export default function Header({isHomepage}) {
       color: "black",
     },
     bmOverlay: {
-      background: "rgba(255, 200, 255, 0.03 )",
+      background: "rgba(15, 15, 15, 0.3 )",
     },
     scrollColor: {
       backgroundColor: "white",
@@ -110,7 +110,7 @@ export default function Header({isHomepage}) {
             style={styles.headerLogoText}
             className={isSecondStyle() ? "headerLogoTextWhite" : "headerLogoTextBlack"}
             >
-            Haven Logo Placeholder
+            Haven North Carolina
           </a>: null}
           
         </div>

@@ -17,6 +17,9 @@ export default function Cabin({cabinOne}) {
                 </ul>
             </div>
         </div>
+        <div>
+            <a href="/booking" className="btn btn-primary">Book Now</a>
+        </div>
 
     </div>
   )

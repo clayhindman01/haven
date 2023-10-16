@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
 import Cabin from "../components/Cabin";
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 export default function Booking() {
   return (
