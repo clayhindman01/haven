@@ -1,11 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../components/Header";
 import FadeIn from "react-fade-in";
 import Fade from "react-reveal/Fade";
 import Accomodations from "../components/Accomodations";
 import PhotosTile from "../components/PhotosTile";
+import { init } from "@emailjs/browser";
 
 export default function Home() {
+  const [state, setState] = useState({});
+
+  const handleStateUpdate = (field, value) => {
+    setState({
+      ...state,
+      field,
+      value,
+    });
+  };
+  init("user_Q4YWJFQfUGRN7ZrNUUSm3");
+
+  const handleSubmit = () => {
+    console.log(state);
+  };
+
   return (
     <>
       <Header isHomepage={true} />
@@ -64,6 +80,59 @@ export default function Home() {
                   Meet the Founders
                 </a>
               </div>
+            </Fade>
+          </div>
+        </div>
+
+        <div className="homeAboutSectionContainer">
+          <div className="homeAboutSection">
+            <Fade>
+              <h1 className="homeAboutSectionHeader">Wedding Venue Inquiry</h1>
+              <p>
+                Tell us about your event and we will reach out to you shortly.
+              </p>
+              <form onSubmit={handleSubmit}>
+                <label>Name:</label>
+                <input
+                  type="text"
+                  placeholder="Name"
+                  value={state.name}
+                  onChange={(e) => handleStateUpdate("name", e.target.value)}
+                />
+
+                <label>Future Spouses Name:</label>
+                <input
+                  type="text"
+                  placeholder="Future Spouses Name"
+                  value={state.spouseName}
+                  onChange={(e) =>
+                    handleStateUpdate("spouseName", e.target.value)
+                  }
+                />
+
+                <label>Email:</label>
+                <input type="text" placeholder="Email" />
+
+                <label>Year and Possible Season of Event:</label>
+                <input type="text" placeholder="Year and Season" />
+
+                <label>
+                  Any Details About Your Event. The More the Merrier:
+                </label>
+                <input type="text" placeholder="Details" />
+                <div
+                  className="homeButton homeButtonText"
+                  onClick={handleSubmit}
+                >
+                  Send
+                </div>
+              </form>
+
+              <img
+                src="Abstract-Flower.png"
+                alt="flower"
+                className="flowerImage"
+              />
             </Fade>
           </div>
         </div>

@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Photos from "./pages/Photos";
 
 function App() {
+  
   return (
     <BrowserRouter>
       <Routes>
