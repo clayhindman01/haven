@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { slide as Menu } from "react-burger-menu";
 import useWindowDimensions from "../utils/utils";
 
-export default function Header({isHomepage}) {
+export default function Header({ isHomepage }) {
   const { height, width } = useWindowDimensions();
   const [screenPosition, setScreenPosition] = useState(0);
 
@@ -14,7 +14,7 @@ export default function Header({isHomepage}) {
   };
 
   const isSecondStyle = () => {
-    return (screenPosition <= height && isHomepage);
+    return screenPosition <= height && isHomepage;
   };
 
   const styles = {
@@ -83,10 +83,9 @@ export default function Header({isHomepage}) {
       textDecoration: "none",
     },
   };
-  
 
   useEffect(() => {
-    console.log(isHomepage)
+    console.log(isHomepage);
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -104,15 +103,22 @@ export default function Header({isHomepage}) {
         }
       >
         <div className="logo">
-          <img src="logo.png" alt="logo" className={isSecondStyle() ? "logoImageSecondStyle" : "logoImage"} />
-          {!isSecondStyle() ? <a
-            href="/"
-            style={styles.headerLogoText}
-            className={isSecondStyle() ? "headerLogoTextWhite" : "headerLogoTextBlack"}
+          <img
+            src="logo.png"
+            alt="logo"
+            className={isSecondStyle() ? "logoImageSecondStyle" : "logoImage"}
+          />
+          {!isSecondStyle() ? (
+            <a
+              href="/"
+              style={styles.headerLogoText}
+              className={
+                isSecondStyle() ? "headerLogoTextWhite" : "headerLogoTextBlack"
+              }
             >
-            Haven North Carolina
-          </a>: null}
-          
+              Haven North Carolina
+            </a>
+          ) : null}
         </div>
       </div>
       <div id="outer-container">
@@ -132,7 +138,7 @@ export default function Header({isHomepage}) {
           </a>
           <a id="photos" className="menu-item" href="/photos">
             Photos
-            </a>
+          </a>
           <a id="about" className="menu-item" href="/about">
             Meet the Founders
           </a>

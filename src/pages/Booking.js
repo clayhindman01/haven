@@ -5,14 +5,16 @@ import Cabin from "../components/Cabin";
 export default function Booking() {
   return (
     <>
-    <Header isHomepage={false} />
-    <div className="container bookingContainer">
-      <div className="center">
-        <Cabin cabinOne={true} />
-        <Cabin cabinOne={false} />
+      <Header isHomepage={false} />
+      <div className="container bookingContainer">
+        <div className="bookingCon">
+          <div className="center ">
+            {/* <Cabin cabinOne={true} />
+            <Cabin cabinOne={false} /> */}
+            Booking Coming Soon
+          </div>
+        </div>
       </div>
-    </div>
     </>
-    
   );
 }
