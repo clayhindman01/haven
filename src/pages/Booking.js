@@ -8,10 +8,9 @@ export default function Booking() {
       <Header isHomepage={false} />
       <div className="container bookingContainer">
         <div className="bookingCon">
-          <div className="center ">
-            {/* <Cabin cabinOne={true} />
-            <Cabin cabinOne={false} /> */}
-            Booking Coming Soon
+          <div className="center tempBookingText">
+            Online Booking Coming Soon. In the meantime, check us out on AirBnB
+            or VRBO or call us at (123)454-6789.
           </div>
         </div>
       </div>
