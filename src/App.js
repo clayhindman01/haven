@@ -7,12 +7,10 @@ import Home from "./pages/Home";
 import Photos from "./pages/Photos";
 
 function App() {
-  
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
         <Route path="/booking" element={<Booking />} />
         <Route path="/weddingVenue" element={<WeddingVenue />} />
         <Route path="/photos" element={<Photos />} />

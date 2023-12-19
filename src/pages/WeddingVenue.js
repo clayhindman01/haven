@@ -4,7 +4,7 @@ import Header from "../components/Header";
 export default function WeddingVenue() {
   return (
     <div className="container">
-      <Header />
+      <Header activeTab="weddingVenue" />
       <div className="center">
         <p className="homeText">WEDDING VENUE</p>
       </div>

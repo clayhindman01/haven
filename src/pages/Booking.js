@@ -5,7 +5,7 @@ import Cabin from "../components/Cabin";
 export default function Booking() {
   return (
     <>
-      <Header isHomepage={false} />
+      <Header activeTab="booking" />
       <div className="container bookingContainer">
         <div className="bookingCon">
           <div className="center tempBookingText">

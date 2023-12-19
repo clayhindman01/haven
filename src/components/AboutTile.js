@@ -7,9 +7,9 @@ export default function AboutTile() {
       <Fade>
         <div className="aboutSection">
           <div className="aboutTextContainer">
-            <p className="fancyFont homeText">About Us</p>
-            <div className="horizontalLine" />
-            <p>
+            <p className="fancyFont homeText homeTextAboutTile">About Us</p>
+            <div className="horizontalLineAboutTile" />
+            <p className="homeTextAboutTile">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed odio
               dui, cursus et dolor a, sagittis sagittis tortor. Praesent urna
               sapien, interdum at lectus sit amet, facilisis tristique diam. Sed
@@ -19,7 +19,7 @@ export default function AboutTile() {
               velit id, volutpat malesuada ipsum. Vestibulum nibh leo,
               scelerisque at dictum id, semper non odio.
             </p>
-            <p>
+            <p className="homeTextAboutTile">
               Etiam semper sodales lacus. Aliquam blandit purus felis, ut
               vulputate nisi volutpat sit amet. Pellentesque egestas nulla eu
               libero condimentum lobortis. Aenean at convallis odio, eget

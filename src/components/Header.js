@@ -1,22 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { slide as Menu } from "react-burger-menu";
-import useWindowDimensions from "../utils/utils";
+import React from "react";
 
-export default function Header({ isHomepage }) {
-  const { height, width } = useWindowDimensions();
-  const [screenPosition, setScreenPosition] = useState(0);
-
-  console.log("height", height);
-
-  const handleScroll = () => {
-    console.log(window.pageYOffset);
-    setScreenPosition(window.pageYOffset);
-  };
-
-  const isSecondStyle = () => {
-    return screenPosition <= height && isHomepage;
-  };
-
+export default function Header({ activeTab }) {
   const styles = {
     bmBurgerButton: {
       position: "fixed",
@@ -27,7 +11,7 @@ export default function Header({ isHomepage }) {
       top: "20px",
     },
     bmBurgerBars: {
-      background: isSecondStyle() ? "white" : "#373a47",
+      background: "#373a47",
       opacity: 0.8,
     },
     bmBurgerBarsHover: {
@@ -78,50 +62,61 @@ export default function Header({ isHomepage }) {
     },
     headerLogoText: {
       margin: 0,
-      fontSize: 22,
+      fontSize: 24,
       fontWeight: 400,
       textDecoration: "none",
     },
   };
 
-  useEffect(() => {
-    console.log(isHomepage);
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
-    <div>
-      <div
-        className="header"
-        style={
-          isSecondStyle()
-            ? { backgroundColor: "transparent" }
-            : styles.scrollColor
-        }
-      >
+    <div className="header">
+      <div className="headerLeft">
         <div className="logo">
-          <img
-            src="logo.png"
-            alt="logo"
-            className={isSecondStyle() ? "logoImageSecondStyle" : "logoImage"}
-          />
-          {!isSecondStyle() ? (
-            <a
-              href="/"
-              style={styles.headerLogoText}
-              className={
-                isSecondStyle() ? "headerLogoTextWhite" : "headerLogoTextBlack"
-              }
-            >
-              Haven North Carolina
-            </a>
-          ) : null}
+          <img src="logo.png" alt="logo" className="logoImage" />
+          <a
+            href="/"
+            // style={styles.headerLogoText}
+            className="headerLogoText"
+          >
+            Haven North Carolina
+          </a>
         </div>
       </div>
-      <div id="outer-container">
+
+      <div className="menuOptions">
+        <div className={activeTab === "home" ? "menuItem active" : "menuItem"}>
+          <a href="/#" className="">
+            Home
+          </a>
+        </div>
+
+        <div
+          className={activeTab === "booking" ? "menuItem active" : "menuItem"}
+        >
+          <a href="/booking" className="">
+            Accomodations
+          </a>
+        </div>
+
+        <div
+          className={activeTab === "photos" ? "menuItem active" : "menuItem"}
+        >
+          <a href="/photos" className="">
+            Photos
+          </a>
+        </div>
+
+        <div
+          className={
+            activeTab === "weddingVenue" ? "menuItem active" : "menuItem"
+          }
+        >
+          <a href="/weddingVenue" className="">
+            Wedding Venue
+          </a>
+        </div>
+      </div>
+      {/* <div id="outer-container">
         <Menu
           className="menu"
           styles={styles}
@@ -146,7 +141,7 @@ export default function Header({ isHomepage }) {
             Wedding Venue
           </a>
         </Menu>
-      </div>
+      </div> */}
     </div>
   );
 }

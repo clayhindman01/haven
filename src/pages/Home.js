@@ -25,7 +25,7 @@ export default function Home() {
 
   return (
     <>
-      <Header isHomepage={true} />
+      <Header activeTab="home" />
       <div className="container homepageContainer">
         <FadeIn transitionDuration={2000}>
           <div className="centerJustify homeheight">
