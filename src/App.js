@@ -2,7 +2,6 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import WeddingVenue from "./pages/WeddingVenue";
 import Booking from "./pages/Booking";
-import About from "./pages/About";
 import Home from "./pages/Home";
 import Photos from "./pages/Photos";
 

@@ -38,7 +38,7 @@ export default function Accomodations() {
             <div className="homeButtonContainer">
               <div className="homeButton">
                 <a href="/booking" className="homeButtonText">
-                  Cabins
+                  Coming Soon
                 </a>
               </div>
             </div>

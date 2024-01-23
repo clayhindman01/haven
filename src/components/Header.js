@@ -107,12 +107,20 @@ export default function Header({ activeTab }) {
         </div>
 
         <div
+          className={activeTab === "reviews" ? "menuItem active" : "menuItem"}
+        >
+          <a href="/reviews" className="">
+            Reviews
+          </a>
+        </div>
+
+        <div
           className={
-            activeTab === "weddingVenue" ? "menuItem active" : "menuItem"
+            activeTab === "meetTheFounders" ? "menuItem active" : "menuItem"
           }
         >
-          <a href="/weddingVenue" className="">
-            Wedding Venue
+          <a href="/meetTheFounders" className="">
+            Meet the Founders
           </a>
         </div>
       </div>

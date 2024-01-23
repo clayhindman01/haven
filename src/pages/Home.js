@@ -6,6 +6,8 @@ import Accomodations from "../components/Accomodations";
 import PhotosTile from "../components/PhotosTile";
 import { init } from "@emailjs/browser";
 import AboutTile from "../components/AboutTile";
+import Amenities from "../components/Amenities";
+import Footer from "../components/Footer";
 
 export default function Home() {
   const [state, setState] = useState({});
@@ -47,8 +49,9 @@ export default function Home() {
         <Accomodations />
         <PhotosTile />
         <AboutTile />
+        {/* <Amenities /> */}
 
-        <div className="homeAboutSectionContainer">
+        {/* <div className="homeAboutSectionContainer">
           <div className="homeAboutSection">
             <Fade>
               <h1 className="homeAboutSectionHeader">Wedding Venue Inquiry</h1>
@@ -93,7 +96,8 @@ export default function Home() {
               </form>
             </Fade>
           </div>
-        </div>
+        </div> */}
+        <Footer />
       </div>
     </>
   );

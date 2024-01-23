@@ -6,10 +6,6 @@ body {
   font-weight: 300;
 }
 
-.fancyFont {
-  font-family: 'Cormorant Garamond';
-}
-
 .header {
   flex-direction: row;
   background-color: #f5f5f5;
@@ -311,8 +307,8 @@ body {
    background-color:rgba(255, 255, 255);
    padding: 2rem 2.5rem;
    max-width: 40rem;
-   /* margin-left: 50rem; */
-   /* margin-top: 25rem; */
+   margin-left: 50rem;
+   margin-top: 25rem;
    border-radius: 3px;
    display: flex;
    justify-content: center;
@@ -332,7 +328,6 @@ body {
   align-items: center;
   padding-top: 20rem;  
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.85);
 }
 
 .accomodationTextContainer {
@@ -364,7 +359,6 @@ body {
   align-items: center;
   padding-bottom: 10rem;  
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.85);
 }
 
 .aboutTextContainer {
@@ -408,6 +402,69 @@ body {
 
 .tempBookingText {
   font-size: 30px;
+}
+
+.amenitiesContainer {
+  width: 100%;
+  background-color: #6a7773;
+  padding: 5rem 0rem;
+}
+
+.amenityIcon {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 100%;
+  border: 5px solid #2f3131;
+}
+
+.amenityIconText {
+  color:white;
+  font-size: 20px;
+}
+
+.amenityPadding {
+  padding-top: 3rem;
+}
+
+.footer-container {
+  padding: 2rem;
+  background-color: #2f3131;
+}
+
+.footer-text {
+  color: white;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.spaceEvenly {
+  justify-content: space-evenly;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.textCenter {
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 @media (max-width: 1461px) {
