@@ -4,6 +4,7 @@ import WeddingVenue from "./pages/WeddingVenue";
 import Booking from "./pages/Booking";
 import Home from "./pages/Home";
 import Photos from "./pages/Photos";
+import MeetTheFounders from "./pages/MeetTheFounders";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/booking" element={<Booking />} />
         <Route path="/weddingVenue" element={<WeddingVenue />} />
         <Route path="/photos" element={<Photos />} />
+        <Route path="/meetTheFounders" element={<MeetTheFounders />} />
       </Routes>
     </BrowserRouter>
   );

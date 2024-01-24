@@ -166,15 +166,15 @@ body {
 .bookingContainer {
   background-size: cover;
   height: 100%;
-  background-color:#6a7773;
+  /* background-color:#6a7773; */
 }
 
 .accomodationsBackground{
-  background-color: #6a7773;
+  /* background-color: #6a7773; */
 }
 .bookingCon {
   display: flex;
-  background-color: #6a7773;
+  /* background-color: #6a7773; */
 
   flex-direction: column;
   /* justify-content: center; */
@@ -223,7 +223,6 @@ body {
 .logoImage {
   height: 50px;
   width: 50px;
-  margin-bottom: -15px;
 }
 .logoImageSecondStyle {
   height: 80px;
@@ -331,11 +330,12 @@ body {
 }
 
 .accomodationsCabinImage {
-  width: 50%;
+  width: 30%;
   z-index: -1;
 }
 
 .accomodationsCabinImageReversed {
+  width: 40%;
   margin-left: -12rem;
 }
 
@@ -351,7 +351,8 @@ body {
 .accomodationTextContainer {
   height: 50%;
   width: 50%;
-  margin-left: -12rem;
+  margin-top: -10%;
+  margin-left: -12%;
   padding: 0rem;
   background-color: white;
 }
@@ -424,8 +425,30 @@ body {
 
 .tempBookingText {
   font-size: 30px;
-  padding: 3rem;
+  padding:10rem 8rem;
   text-align: center;
+}
+
+.meetTheFoundersText {
+  width: 60%;
+  font-size: 24px;
+  text-align: left;
+  padding: 10rem 3rem
+}
+
+.founderCon {
+  padding: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.carousel-root {
+  width: 80%
+}
+
+.control-arrow {
+  width: 10%
 }
 
 .amenitiesContainer {
@@ -452,7 +475,7 @@ body {
 
 .footer-container {
   padding: 2rem;
-  background-color: #2f3131;
+  background-color: #1f2e2e;
 }
 
 .footer-text {
@@ -465,21 +488,29 @@ body {
 
 .react-tabs__tab-list {
   margin: 0px;
-  border: none
+  border: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
-.react-tabs li {
-  width: 50%;
+.vipList {
+  width: 100%;
+  text-align: left;
+}
+
+.react-tabs__tab-list li {
   border: none;
   bottom: 0;
   padding: 0;
+  width: 33%;
 }
 
 .react-tabs__tab--selected {
   bottom: 0;
 }
 
-.react-tabs li:hover {
+.react-tabs__tab-list li:hover {
   background-color:rgba(0, 0, 0, 0.3)
 }
 
@@ -539,4 +570,23 @@ body {
   .accomodationsCabinImage {
     width: 100%;
   } 
+
+  .founderCon {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .meetTheFoundersText {
+    width: 100%;
+    padding: 0;
+  }
+
+  .accomodationTextContainer {
+    flex-direction: column;
+    margin-left: -20%;
+  }
+
+  .accomodationTextContainerReversed {
+    margin-left:0;
+  }
 }
