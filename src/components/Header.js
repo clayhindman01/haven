@@ -1,4 +1,5 @@
 import React from "react";
+import { Menu } from "@mui/material";
 
 export default function Header({ activeTab }) {
   const styles = {
@@ -75,7 +76,7 @@ export default function Header({ activeTab }) {
           <img src="logo.png" alt="logo" className="logoImage" />
           <a
             href="/"
-            // style={styles.headerLogoText}
+            style={styles.headerLogoText}
             className="headerLogoText"
           >
             Haven North Carolina
@@ -124,32 +125,6 @@ export default function Header({ activeTab }) {
           </a>
         </div>
       </div>
-      {/* <div id="outer-container">
-        <Menu
-          className="menu"
-          styles={styles}
-          right
-          pageWrapId={"page-wrap"}
-          outerContainerId={"outer-container"}
-          width={"fit-content"}
-        >
-          <a id="home" className="menu-item" href="/">
-            Home
-          </a>
-          <a id="booking" className="menu-item" href="/booking">
-            Accomodations
-          </a>
-          <a id="photos" className="menu-item" href="/photos">
-            Photos
-          </a>
-          <a id="about" className="menu-item" href="/about">
-            Meet the Founders
-          </a>
-          <a id="weddingVenue" className="menu-item" href="/weddingVenue">
-            Wedding Venue
-          </a>
-        </Menu>
-      </div> */}
-    </div>
+    </div> 
   );
 }

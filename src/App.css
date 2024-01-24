@@ -108,9 +108,20 @@ body {
   flex-direction: column;
 }
 
+.text {
+  font-size: 50px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
 .homeText {
-  font-size: 35px;
-  margin-bottom: 1rem;
+  font-size: 30px;
+  text-align: center;
+}
+
+.textPadding {
+  padding: 2rem;
 }
 
 .aboutUsButton {
@@ -154,15 +165,19 @@ body {
 
 .bookingContainer {
   background-size: cover;
-  height: 100vh;
-  /* margin-top: 65px; */
+  height: 100%;
+  background-color:#6a7773;
 }
 
+.accomodationsBackground{
+  background-color: #6a7773;
+}
 .bookingCon {
-  background-color: rgba(255, 255, 255, 0.85);
   display: flex;
+  background-color: #6a7773;
+
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   width: 100%;
   height: 100%;
@@ -222,6 +237,7 @@ body {
   justify-content: center;
   align-items: center;
   height: fit-content;
+  padding-bottom: 5rem;
 }
 
 .homeAboutSection {
@@ -305,10 +321,8 @@ body {
 
 .homeTextContainer {
    background-color:rgba(255, 255, 255);
-   padding: 2rem 2.5rem;
+   padding: 0rem 3rem;
    max-width: 40rem;
-   margin-left: 50rem;
-   margin-top: 25rem;
    border-radius: 3px;
    display: flex;
    justify-content: center;
@@ -317,8 +331,12 @@ body {
 }
 
 .accomodationsCabinImage {
-  width: 60%;
+  width: 50%;
   z-index: -1;
+}
+
+.accomodationsCabinImageReversed {
+  margin-left: -12rem;
 }
 
 .accomodationsSection {
@@ -326,16 +344,20 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding-top: 20rem;  
+  padding-top: 15rem;  
   width: 100%;
 }
 
 .accomodationTextContainer {
   height: 50%;
-  width: 40%;
-  margin-left: -20rem;
-  padding: 1rem;
+  width: 50%;
+  margin-left: -12rem;
+  padding: 0rem;
   background-color: white;
+}
+
+.accomodationTextContainerReversed {
+  margin-left: 0rem;
 }
 
 .horizontalLine {
@@ -402,6 +424,8 @@ body {
 
 .tempBookingText {
   font-size: 30px;
+  padding: 3rem;
+  text-align: center;
 }
 
 .amenitiesContainer {
@@ -433,6 +457,30 @@ body {
 
 .footer-text {
   color: white;
+}
+
+.react-tabs {
+  width: 100%;
+}
+
+.react-tabs__tab-list {
+  margin: 0px;
+  border: none
+}
+
+.react-tabs li {
+  width: 50%;
+  border: none;
+  bottom: 0;
+  padding: 0;
+}
+
+.react-tabs__tab--selected {
+  bottom: 0;
+}
+
+.react-tabs li:hover {
+  background-color:rgba(0, 0, 0, 0.3)
 }
 
 .column {
@@ -467,7 +515,7 @@ body {
   font-weight: bold;
 }
 
-@media (max-width: 1461px) {
+@media (max-width: 1000px) {
   .homeTextContainer {
     width: 100%;
     margin: 0;
@@ -484,11 +532,11 @@ body {
     width: 50%;
   }
 
-  .accomodationsCabinImage {
+  /* .accomodationsCabinImage {
     display: none;
-  }
+  } */
 
-  .accomodationsSection {
-    margin: 0;
-  }
+  .accomodationsCabinImage {
+    width: 100%;
+  } 
 }

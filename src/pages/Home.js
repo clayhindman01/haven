@@ -29,74 +29,18 @@ export default function Home() {
     <>
       <Header activeTab="home" />
       <div className="container homepageContainer">
-        <FadeIn transitionDuration={2000}>
           <div className="centerJustify homeheight">
-            <div className="homeTextContainer">
-              <p className="homeText fancyFont">
-                BOOK YOUR STAY WITH US AND EXPERIENCE THE HAVEN
+            <Fade>
+              <p className="text fancyFont">
+                Welcome
               </p>
-              <div className="aboutUsButton">
-                <a href="/booking" className="aboutUsText">
-                  BOOK NOW
-                </a>
-              </div>
-            </div>
+            </Fade>
           </div>
-        </FadeIn>
       </div>
 
       <div className="homeAboutSectionCon">
         <Accomodations />
-        <PhotosTile />
-        <AboutTile />
-        {/* <Amenities /> */}
-
-        {/* <div className="homeAboutSectionContainer">
-          <div className="homeAboutSection">
-            <Fade>
-              <h1 className="homeAboutSectionHeader">Wedding Venue Inquiry</h1>
-              <p>
-                Tell us about your event and we will reach out to you shortly.
-              </p>
-              <form onSubmit={handleSubmit}>
-                <label>Name:</label>
-                <input
-                  type="text"
-                  placeholder="Name"
-                  value={state.name}
-                  onChange={(e) => handleStateUpdate("name", e.target.value)}
-                />
-
-                <label>Future Spouses Name:</label>
-                <input
-                  type="text"
-                  placeholder="Future Spouses Name"
-                  value={state.spouseName}
-                  onChange={(e) =>
-                    handleStateUpdate("spouseName", e.target.value)
-                  }
-                />
-
-                <label>Email:</label>
-                <input type="text" placeholder="Email" />
-
-                <label>Year and Possible Season of Event:</label>
-                <input type="text" placeholder="Year and Season" />
-
-                <label>
-                  Any Details About Your Event. The More the Merrier:
-                </label>
-                <input type="text" placeholder="Details" />
-                <div
-                  className="homeButton homeButtonText"
-                  onClick={handleSubmit}
-                >
-                  Send
-                </div>
-              </form>
-            </Fade>
-          </div>
-        </div> */}
+        
         <Footer />
       </div>
     </>
