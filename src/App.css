@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
 
 body {
-  font-family: 'Quicksand';
+  /* font-family: 'Quicksand'; */
   color:#2f3131;
   font-weight: 300;
 }
@@ -277,6 +277,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 5rem;
 }
 
 .homeButtonText {
@@ -293,7 +294,6 @@ body {
   padding: 20px 0;
   width: 30%;
   text-align: center;
-  /* background-color: rgb(37, 70, 37); */
   background-color: #4b5351;
   border-radius: 50px;
 }
@@ -336,7 +336,7 @@ body {
 
 .accomodationsCabinImageReversed {
   width: 40%;
-  margin-left: -12rem;
+  margin-left: -10rem;
 }
 
 .accomodationsSection {
@@ -350,10 +350,10 @@ body {
 
 .accomodationTextContainer {
   height: 50%;
-  width: 50%;
+  width: 40%;
   margin-top: -10%;
-  margin-left: -12%;
-  padding: 0rem;
+  margin-left: -10%;
+  padding: 10rem 0rem;
   background-color: white;
 }
 
@@ -584,9 +584,14 @@ body {
   .accomodationTextContainer {
     flex-direction: column;
     margin-left: -20%;
+    padding: 0;
   }
 
   .accomodationTextContainerReversed {
     margin-left:0;
+  }
+
+  .tempBookingText {
+    padding: 10px;
   }
 }
