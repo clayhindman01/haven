@@ -8,7 +8,7 @@ body {
 
 .header {
   flex-direction: row;
-  background-color: #f5f5f5;
+  background-color: #406c4c;
   display: flex;
   justify-content: space-between;
   position: fixed;
@@ -78,17 +78,18 @@ body {
 .container {
   flex: 1;
   background-color: "#fdfdfd";
-  height: auto;
-  min-height: 100vh;
   overflow: hidden;
   width: 100%;
   padding-top: 65px;
 }
 
 .homepageContainer {
-  background-image: url("../public/woods.jpg");
-  background-size: cover;
-  margin: 0;
+  background-image: url("../public/THE-HAVEN-summer-2024-431.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 0;
+  width: 100%;
+  padding-top: 66.64%;
 }
 
 .center {
@@ -96,10 +97,10 @@ body {
   align-items: center;
   flex-direction: column;
 }
-
+/* 
 .homeheight {
-  height: 80vh;
-}
+  height: 0vh;
+} */
 
 .centerJustify {
   display: flex;
@@ -120,8 +121,15 @@ body {
   text-align: center;
 }
 
+.emphesisText {
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+}
+
 .textPadding {
   padding: 2rem;
+  width: 50%;
 }
 
 .aboutUsButton {
@@ -269,7 +277,7 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 70%;
+  width: 50%;
 }
 
 .photoContainer {
@@ -316,6 +324,7 @@ body {
 
 .homeAboutSectionCon {
   background-size: cover;
+  background-color: #eff0ee;
 }
 
 .homeTextContainer {
@@ -334,9 +343,12 @@ body {
   z-index: -1;
 }
 
+.accomodationsContainerReversed {
+  display:flex;
+}
+
 .accomodationsCabinImageReversed {
-  width: 40%;
-  margin-left: -10rem;
+  /* margin-left: -5rem; */
 }
 
 .accomodationsSection {
@@ -349,12 +361,24 @@ body {
 }
 
 .accomodationTextContainer {
-  height: 50%;
   width: 40%;
   margin-top: -10%;
-  margin-left: -10%;
-  padding: 10rem 0rem;
-  background-color: white;
+  /* margin-left: -3%; */
+  padding: 2rem 0rem;
+  /* background-color: #eff0ee; */
+}
+
+.view-accomodations-container {
+  margin-top: 5rem;
+  background-color: #1f2e2e;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 1px 1px 1px gray;
+}
+
+.whiteText {
+  color: white;
+  text-decoration: none;
 }
 
 .accomodationTextContainerReversed {
@@ -395,6 +419,7 @@ body {
 
 .accomodationsCabinImage {
   margin-top: -10rem;
+  box-shadow: 3px 3px 3px gray;
 }
 
 .photosTileContainer {
@@ -581,17 +606,37 @@ body {
     padding: 0;
   }
 
-  .accomodationTextContainer {
+  .accomodationsSection {
     flex-direction: column;
-    margin-left: -20%;
+  }
+
+  .accomodationTextContainer {
+    width: 100%;
+    margin: 0;
     padding: 0;
+  }
+  .accomodationsCabinImage {
+    width: 100%;
   }
 
   .accomodationTextContainerReversed {
     margin-left:0;
   }
 
+  .accomodationsCabinImageReversed {
+    margin: 0;
+  }
+
+  .accomodationContainerReversed {
+    flex-direction: column-reverse;
+    padding: 80px;
+  }
+
   .tempBookingText {
     padding: 10px;
+  }
+
+  .centerPhotos {
+    width: 100%;
   }
 }

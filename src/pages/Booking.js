@@ -23,10 +23,10 @@ export default function Booking() {
           <Tabs>
             <TabList>
               <Tab>
-                <p className="homeText">Juniper House</p>
+                <p className="homeText">The Cypress</p>
               </Tab>
               <Tab>
-                <p className="homeText">Hemlock House</p>
+                <p className="homeText">The Spruce</p>
               </Tab>
               <Tab>
                 <p className="homeText">VIP Package</p>
@@ -47,43 +47,112 @@ export default function Booking() {
                     dynamicHeight={true}
                   >
                     <div>
-                      <img src="juniper1.gif" className="carouselImage" />
+                      <img
+                        src="THE-HAVEN-summer-2024-10.jpg"
+                        className="carouselImage"
+                      />
                     </div>
                     <div>
-                      <img src="juniper2.jpg" className="carouselImage" />
+                      <img
+                        src="THE-HAVEN-summer-2024-17.jpg"
+                        className="carouselImage"
+                      />
                     </div>
                     <div>
-                      <img src="juniper3.webp" className="carouselImage" />
+                      <img
+                        src="THE-HAVEN-summer-2024-18.jpg"
+                        className="carouselImage"
+                      />
                     </div>
                     <div>
-                      <img src="juniper4.webp" className="carouselImage" />
+                      <img
+                        src="THE-HAVEN-summer-2024-23.jpg"
+                        className="carouselImage"
+                      />
                     </div>
                     <div>
-                      <img src="juniper5.webp" className="carouselImage" />
+                      <img
+                        src="THE-HAVEN-summer-2024-27.jpg"
+                        className="carouselImage"
+                      />
                     </div>
                     <div>
-                      <img src="juniper6.webp" className="carouselImage" />
+                      <img
+                        src="THE-HAVEN-summer-2024-28.jpg"
+                        className="carouselImage"
+                      />
                     </div>
                     <div>
-                      <img src="juniper7.webp" className="carouselImage" />
+                      <img
+                        src="THE-HAVEN-summer-2024-40.jpg"
+                        className="carouselImage"
+                      />
                     </div>
                     <div>
-                      <img src="juniper8.webp" className="carouselImage" />
+                      <img
+                        src="THE-HAVEN-summer-2024-51.jpg"
+                        className="carouselImage"
+                      />
                     </div>
                     <div>
-                      <img src="juniper9.webp" className="carouselImage" />
+                      <img
+                        src="THE-HAVEN-summer-2024-60.jpg"
+                        className="carouselImage"
+                      />
                     </div>
                     <div>
-                      <img src="juniper10.webp" className="carouselImage" />
+                      <img
+                        src="THE-HAVEN-summer-2024-70.jpg"
+                        className="carouselImage"
+                      />
                     </div>
                     <div>
-                      <img src="juniper11.webp" className="carouselImage" />
+                      <img
+                        src="THE-HAVEN-summer-2024-71.jpg"
+                        className="carouselImage"
+                      />
                     </div>
                     <div>
-                      <img src="juniper12.webp" className="carouselImage" />
+                      <img
+                        src="THE-HAVEN-summer-2024-76.jpg"
+                        className="carouselImage"
+                      />
                     </div>
                     <div>
-                      <img src="juniper13.webp" className="carouselImage" />
+                      <img
+                        src="THE-HAVEN-summer-2024-83.jpg"
+                        className="carouselImage"
+                      />
+                    </div>
+                    <div>
+                      <img
+                        src="THE-HAVEN-summer-2024-91.jpg"
+                        className="carouselImage"
+                      />
+                    </div>
+                    <div>
+                      <img
+                        src="THE-HAVEN-summer-2024-91.jpg"
+                        className="carouselImage"
+                      />
+                    </div>
+                    <div>
+                      <img
+                        src="THE-HAVEN-summer-2024-110.jpg"
+                        className="carouselImage"
+                      />
+                    </div>
+                    <div>
+                      <img
+                        src="THE-HAVEN-summer-2024-119.jpg"
+                        className="carouselImage"
+                      />
+                    </div>
+                    <div>
+                      <img
+                        src="THE-HAVEN-summer-2024-146.jpg"
+                        className="carouselImage"
+                      />
                     </div>
                   </Carousel>
                 </div>
