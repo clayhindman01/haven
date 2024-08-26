@@ -5,8 +5,10 @@ import "react-tabs/style/react-tabs.css";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Footer from "../components/Footer";
+import InnerHTML from "dangerously-set-html-content";
 
 export default function Booking() {
+  const bookingWidgetHTML = `<div id="search-widget_IO312PWQ"><script>!function(e,t,a,n,c,r){function s(t){e.console.log("[Guesty Embedded Widget]:",t)}var i,d,l,o,y,m,g,h,p,u;n&&(i=n,d=t.getElementsByTagName("head")[0],(l=t.createElement("link")).rel="stylesheet",l.type="text/css",l.href=i,l.media="all",d.appendChild(l)),o=function(){try{e[a].create(r).catch(function(e){s(e.message)})}catch(e){s(e.message)}},h=!1,y=c,m=function(){h||this.readyState&&"complete"!=this.readyState||(h=!0,o())},(g=t.createElement("script")).type="text/javascript",g.src=y,g.async="true",g.onload=g.onreadystatechange=m,p=g,(u=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,u)}(window,document,"GuestySearchBarWidget","https://s3.amazonaws.com/guesty-frontend-production/search-bar-production.css","https://s3.amazonaws.com/guesty-frontend-production/search-bar-production.js",{"siteUrl":"juliemallette.guestybookings.com"});</script></div>`;
   return (
     <>
       <Header activeTab="booking" />
@@ -19,6 +21,10 @@ export default function Booking() {
             our local wines as you bask in the starlight. Bathe with a view.
             Wake up to your personal view of the mountains as you snuggle in
             bed.
+          </div>
+          <div className="bookingWidgetContainer">
+            <h2>Check Availibility</h2>
+            <InnerHTML html={bookingWidgetHTML} />
           </div>
           <Tabs>
             <TabList>
