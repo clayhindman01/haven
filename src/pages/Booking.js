@@ -8,7 +8,7 @@ import Footer from "../components/Footer";
 import InnerHTML from "dangerously-set-html-content";
 
 export default function Booking() {
-  console.log("testing")
+  console.log("testing");
   const bookingWidgetHTML = `<div id="search-widget_IO312PWQ"><script>!function(e,t,a,n,c,r){function s(t){e.console.log("[Guesty Embedded Widget]:",t)}var i,d,l,o,y,m,g,h,p,u;n&&(i=n,d=t.getElementsByTagName("head")[0],(l=t.createElement("link")).rel="stylesheet",l.type="text/css",l.href=i,l.media="all",d.appendChild(l)),o=function(){try{e[a].create(r).catch(function(e){s(e.message)})}catch(e){s(e.message)}},h=!1,y=c,m=function(){h||this.readyState&&"complete"!=this.readyState||(h=!0,o())},(g=t.createElement("script")).type="text/javascript",g.src=y,g.async="true",g.onload=g.onreadystatechange=m,p=g,(u=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,u)}(window,document,"GuestySearchBarWidget","https://s3.amazonaws.com/guesty-frontend-production/search-bar-production.css","https://s3.amazonaws.com/guesty-frontend-production/search-bar-production.js",{"siteUrl":"thehavenwnc.guestybookings.com"});</script></div>`;
   return (
     <>
@@ -36,14 +36,14 @@ export default function Booking() {
                 <p className="homeText">The Spruce</p>
               </Tab>
               <Tab>
-                <p className="homeText">VIP Package</p>
+                <p className="homeText">Always Included</p>
               </Tab>
             </TabList>
 
             <TabPanel>
               <div className="center accomodationsBackground">
                 <p className="homeText">
-                  Relax in the elegant seclusion of our Juniper House. Wake up
+                  Relax in the elegant seclusion of our Cypress Villa. Wake up
                   to your personal view of the mountains.
                 </p>
 
@@ -168,8 +168,8 @@ export default function Booking() {
 
             <TabPanel>
               <div className="center accomodationsBackground">
-                <p className="homeText">
-                  Retreat to the luxurious shade of our Hemlock House. As you
+                <p className="homeText bookingText">
+                  Retreat to the luxurious shade of our Spruce Villa. As you
                   take in spectacular views from your doorstep, reconnect to the
                   world and the one you share it with.
                 </p>
@@ -226,24 +226,30 @@ export default function Booking() {
 
             <TabPanel>
               <div className="center accomodationsBackground">
-                <p className="homeText">
-                  Upgrade your mountaintop retreat experience by adding on the
-                  VIP package:
-                </p>
+                <p className="homeText">Always Included with your stay:</p>
                 <ul className="homeText">
-                  <li className="vipList">
-                    Build your own charcuterie for two
-                  </li>
-                  <li className="vipList">
-                    Bottle of Wine or Sparking Non-Alcoholic Beverage
-                  </li>
-                  <li className="vipList">S'mores supply kit for two</li>
-                  <li className="vipList">$100 off your next stay</li>
+                  <li className="vipList">Bottle of Wine</li>
+                  <li className="vipList">Piza Kit</li>
+                  <li className="vipList">Pasta Ingredients</li>
+                  <li className="vipList">Breakfast Pastries</li>
+                  <li className="vipList">S'mores</li>
+                  <li className="vipList">Hot Chocolate</li>
                 </ul>
-                <p className="homeText">
-                  Don't miss out, add on the VIP Experience today during
-                  checkout!
-                </p>
+
+                <p className="homeText">Additional Add Ons:</p>
+                <div className="homeText flexCenter">
+                  <p style={{ margin: 0 }}>
+                    <span style={{ fontWeight: 400 }}>
+                      Special Romance Package
+                    </span>
+                    &nbsp;- $100
+                  </p>
+                  <p style={{ width: "60%", marginTop: 1 }}>
+                    Step into the perfect romantic setting with flower petals
+                    and flameless candles around the hot tub and villa and a
+                    bottle of bubbly champagne just waiting for you to pop open!
+                  </p>
+                </div>
                 <div className="center centerPhotos"></div>
               </div>
             </TabPanel>

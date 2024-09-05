@@ -10,21 +10,15 @@ export default function MeetTheFounders() {
         <div className="founderCon">
           <img src="founders.png" className="founderImage" />
           <div className="center meetTheFoundersText">
-            Welcome to our haven! <br />
-            <br /> We have been married for 25 years, and each day has been an
-            adventure. We have trekked parts of nearly every National Park, and
-            once we stop in Asia and Africa this Spring we will have traveled to
-            every continent! Throughout our travels, we realized the most
-            breathtaking moments were just the two of us, enjoying the view, all
-            alone. These moments have played a significant role in our marriage!
-            By allowing us to step away from the chaos of life and the mundanity
-            of routine, it reignites our love for each other. We can reconnect
-            in the middle of our disconnected world. <br />
-            <br />
-            When we first stepped onto this breathtaking acreage, we knew it was
-            something special and we couldn't just keep it to ourselves. We hope
-            that as you retreat to The Haven, it will be a place for you to
-            experience rejuvenation and reconnection with who matters most.
+            Hi! Let us introduce ourselves! Ken & Julie Mallette: Lovers, best
+            friends, & business partners for over 25 years - and still going
+            strong! ❤️ How do we make it work? By taking time to step away from
+            the craziness of life and focus on each other. That is why we want
+            to share The Haven with you! When we first stepped onto this
+            property, we knew it was special. The gorgeous views coupled with
+            total privacy made it the perfect spot to shut out the world for a
+            time. The Haven offers everything you need to relax, recharge, and
+            reconnect to who and what you love!
             <br />
             <br /> ~ Ken & Julie
           </div>

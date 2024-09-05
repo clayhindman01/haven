@@ -15,15 +15,14 @@ export default function Accomodations() {
         </p>
         <div className="accomodationsSection">
           <img
-            src="THE-HAVEN-summer-2024-171.jpg"
+            src="THE-HAVEN-summer-2024-663.jpg"
             className="accomodationsCabinImage"
           ></img>
 
           {/* <Fade> */}
           <div className="accomodationTextContainer">
             <p className="homeText">
-              <p className="emphasisText">Recharge</p> with a hike on one of our
-              many trails.
+              Relax beneath the stars by your private fire pit.
             </p>
           </div>
           {/* </Fade> */}
@@ -39,7 +38,7 @@ export default function Accomodations() {
           {/* </Fade> */}
 
           <img
-            src="THE-HAVEN-summer-2024-663.jpg"
+            src="THE-HAVEN-summer-2024-171.jpg"
             className="accomodationsCabinImage accomodationsCabinImageReversed"
           ></img>
         </div>

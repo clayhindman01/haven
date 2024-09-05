@@ -89,7 +89,7 @@ body {
   background-repeat: no-repeat;
   height: 0;
   width: 100%;
-  padding-top: 66.64%;
+  padding-top: 48%;
 }
 
 .center {
@@ -127,6 +127,10 @@ body {
 .homeText {
   font-size: 30px;
   text-align: center;
+}
+
+.bookingText {
+  width: 60%;
 }
 
 .emphesisText {
@@ -527,6 +531,13 @@ body {
 .vipList {
   width: 100%;
   text-align: left;
+}
+
+.flexCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .react-tabs__tab-list li {

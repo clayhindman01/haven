@@ -19,8 +19,8 @@ export default function Footer() {
     <div className="row footer-container space-around">
       <div className="address-container">
         <h1 className="footer-text">Haven</h1>
-        <p className="footer-text">Some Address</p>
-        <p className="footer-text">NC</p>
+        <p className="footer-text">2 Prospect Lane</p>
+        <p className="footer-text">Clyde NC 28722</p>
       </div>
 
       <div className="social-media-container">
