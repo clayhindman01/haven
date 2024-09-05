@@ -124,7 +124,7 @@ export default function Booking() {
                 <p className="homeText">Always Included with your stay:</p>
                 <ul className="homeText">
                   <li className="vipList">Bottle of Wine</li>
-                  <li className="vipList">Piza Kit</li>
+                  <li className="vipList">Pizza Kit</li>
                   <li className="vipList">Pasta Ingredients</li>
                   <li className="vipList">Breakfast Pastries</li>
                   <li className="vipList">S'mores</li>
