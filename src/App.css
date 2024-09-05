@@ -26,13 +26,13 @@ body {
   justify-content: center;
   align-items: center;
 }
-
+/* 
 .logo {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-};
+}; */
 
 
 .menuOptions {
@@ -125,6 +125,7 @@ body {
 .founderImage {
   width: 25%;
   height: 25%;
+  box-shadow: 1px 1px 1px gray;
 }
 
 .bookingText {
@@ -621,12 +622,16 @@ body {
 
   .homeText {
     padding: 1rem;
-    font-size: 30px;
+    font-size: 25px;
   }
 
   .aboutUsButton {
     padding: 1rem;
     width: 50%;
+  }
+
+  .tempBookingText {
+    font-size: 25px;
   }
 
   /* .accomodationsCabinImage {
@@ -643,12 +648,21 @@ body {
   }
 
   .meetTheFoundersText {
-    width: 100%;
+    width: 80%;
     padding: 0;
+  }
+  .founderImage {
+    width: 75%;
+    height: 75%;
+    margin: 2rem;
   }
 
   .accomodationsSection {
     flex-direction: column;
+  }
+
+  .textPadding {
+    width: 80%;
   }
 
   .accomodationTextContainer {

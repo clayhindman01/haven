@@ -103,7 +103,14 @@ export default function Header({ isHomepage }) {
             : styles.scrollColor
         }
       >
-        <div className="logo">
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
           <a href="/">
             <img
               src="logo.png"
