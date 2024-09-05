@@ -8,46 +8,205 @@ export default function Photos() {
     <>
       <Header activeTab="photos" />
       <div className="container bookingContainer photoContainer">
-        <div className=" centerPhotos">
+        <div className="center centerPhotos">
           <Carousel axis="horizontal" autoPlay={true} dynamicHeight={true}>
+            {/* <div> */}
+            <img
+              src="THE-HAVEN-summer-2024-854.jpg"
+              className="accomodationsCabinImage"
+            />
+            {/* </div> */}
             <div>
-              <img src="juniper1.gif" className="carouselImage" />
+              <img
+                src="THE-HAVEN-summer-2024-46.jpg"
+                className="accomodationsCabinImage"
+              />
             </div>
             <div>
-              <img src="juniper2.jpg" className="carouselImage" />
+              <img
+                src="THE-HAVEN-summer-2024-49.jpg"
+                className="accomodationsCabinImage"
+              />
             </div>
             <div>
-              <img src="juniper3.webp" className="carouselImage" />
+              <img
+                src="THE-HAVEN-summer-2024-115.jpg"
+                className="accomodationsCabinImage"
+              />
             </div>
             <div>
-              <img src="juniper4.webp" className="carouselImage" />
+              <img
+                src="THE-HAVEN-summer-2024-134.jpg"
+                className="accomodationsCabinImage"
+              />
             </div>
             <div>
-              <img src="juniper5.webp" className="carouselImage" />
+              <img
+                src="THE-HAVEN-summer-2024-135.jpg"
+                className="accomodationsCabinImage"
+              />
             </div>
             <div>
-              <img src="juniper6.webp" className="carouselImage" />
+              <img
+                src="THE-HAVEN-summer-2024-153.jpg"
+                className="accomodationsCabinImage"
+              />
             </div>
             <div>
-              <img src="juniper7.webp" className="carouselImage" />
+              <img
+                src="THE-HAVEN-summer-2024-135.jpg"
+                className="accomodationsCabinImage"
+              />
             </div>
             <div>
-              <img src="juniper8.webp" className="carouselImage" />
+              <img
+                src="THE-HAVEN-summer-2024-212.jpg"
+                className="accomodationsCabinImage"
+              />
             </div>
             <div>
-              <img src="juniper9.webp" className="carouselImage" />
+              <img
+                src="THE-HAVEN-summer-2024-223.jpg"
+                className="accomodationsCabinImage"
+              />
             </div>
             <div>
-              <img src="juniper10.webp" className="carouselImage" />
+              <img
+                src="THE-HAVEN-summer-2024-227.jpg"
+                className="accomodationsCabinImage"
+              />
             </div>
             <div>
-              <img src="juniper11.webp" className="carouselImage" />
+              <img
+                src="THE-HAVEN-summer-2024-242.jpg"
+                className="accomodationsCabinImage"
+              />
             </div>
             <div>
-              <img src="juniper12.webp" className="carouselImage" />
+              <img
+                src="THE-HAVEN-summer-2024-379.jpg"
+                className="accomodationsCabinImage"
+              />
             </div>
             <div>
-              <img src="juniper13.webp" className="carouselImage" />
+              <img
+                src="THE-HAVEN-summer-2024-381.jpg"
+                className="accomodationsCabinImage"
+              />
+            </div>
+            <div>
+              <img
+                src="THE-HAVEN-summer-2024-383.jpg"
+                className="accomodationsCabinImage"
+              />
+            </div>
+            <div>
+              <img
+                src="THE-HAVEN-summer-2024-392.jpg"
+                className="accomodationsCabinImage"
+              />
+            </div>
+            <div>
+              <img
+                src="THE-HAVEN-summer-2024-396.jpg"
+                className="accomodationsCabinImage"
+              />
+            </div>
+            <div>
+              <img
+                src="THE-HAVEN-summer-2024-428.jpg"
+                className="accomodationsCabinImage"
+              />
+            </div>
+            <div>
+              <img
+                src="THE-HAVEN-summer-2024-482.jpg"
+                className="accomodationsCabinImage"
+              />
+            </div>
+            <div>
+              <img
+                src="THE-HAVEN-summer-2024-486.jpg"
+                className="accomodationsCabinImage"
+              />
+            </div>
+            <div>
+              <img
+                src="THE-HAVEN-summer-2024-489.jpg"
+                className="accomodationsCabinImage"
+              />
+            </div>
+            <div>
+              <img
+                src="THE-HAVEN-summer-2024-659.jpg"
+                className="accomodationsCabinImage"
+              />
+            </div>
+            <div>
+              <img
+                src="THE-HAVEN-summer-2024-660.jpg"
+                className="accomodationsCabinImage"
+              />
+            </div>
+            <div>
+              <img
+                src="THE-HAVEN-summer-2024-679.jpg"
+                className="accomodationsCabinImage"
+              />
+            </div>
+            <div>
+              <img
+                src="THE-HAVEN-summer-2024-685.jpg"
+                className="accomodationsCabinImage"
+              />
+            </div>
+            <div>
+              <img
+                src="THE-HAVEN-summer-2024-698.jpg"
+                className="accomodationsCabinImage"
+              />
+            </div>
+            <div>
+              <img
+                src="THE-HAVEN-summer-2024-705.jpg"
+                className="accomodationsCabinImage"
+              />
+            </div>
+            <div>
+              <img
+                src="THE-HAVEN-summer-2024-722.jpg"
+                className="accomodationsCabinImage"
+              />
+            </div>
+            <div>
+              <img
+                src="THE-HAVEN-summer-2024-763.jpg"
+                className="accomodationsCabinImage"
+              />
+            </div>
+            <div>
+              <img
+                src="THE-HAVEN-summer-2024-792.jpg"
+                className="accomodationsCabinImage"
+              />
+            </div>
+            <div>
+              <img
+                src="THE-HAVEN-summer-2024-814.jpg"
+                className="accomodationsCabinImage"
+              />
+            </div>
+            <div>
+              <img
+                src="THE-HAVEN-summer-2024-816.jpg"
+                className="accomodationsCabinImage"
+              />
+            </div>
+            <div>
+              <img
+                src="THE-HAVEN-summer-2024-818.jpg"
+                className="accomodationsCabinImage"
+              />
             </div>
           </Carousel>
         </div>

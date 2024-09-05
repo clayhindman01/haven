@@ -129,6 +129,11 @@ body {
   text-align: center;
 }
 
+.founderImage {
+  width: 25%;
+  height: 25%;
+}
+
 .bookingText {
   width: 60%;
 }
@@ -464,16 +469,17 @@ body {
 }
 
 .meetTheFoundersText {
-  width: 60%;
+  width: 25%;
   font-size: 24px;
   text-align: left;
-  padding: 10rem 3rem
+  /* padding: 10rem 3rem */
 }
 
 .founderCon {
-  padding: 5rem;
+  padding: 2rem 0rem;
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-around;
 }
 

@@ -18,13 +18,13 @@ export default function Footer() {
   return (
     <div className="row footer-container space-around">
       <div className="address-container">
-        <h1 className="footer-text">Haven</h1>
-        <p className="footer-text">2 Prospect Lane</p>
+        <h1 className="footer-text">The Haven WNC</h1>
+        <p className="footer-text">2 Prospect Lane, Clyde NC 28722</p>
         <p className="footer-text">Clyde NC 28722</p>
       </div>
 
       <div className="social-media-container">
-        <Twitter color={theme.pa} />
+        <Twitter color="white" />
       </div>
     </div>
   );

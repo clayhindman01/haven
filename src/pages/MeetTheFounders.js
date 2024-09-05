@@ -8,7 +8,7 @@ export default function MeetTheFounders() {
       <Header activeTab="meetTheFounders" />
       <div className="container bookingContainer">
         <div className="founderCon">
-          <img src="founders.png" className="founderImage" />
+          <img src="THE-HAVEN-summer-2024-773.jpg" className="founderImage" />
           <div className="center meetTheFoundersText">
             Hi! Let us introduce ourselves! Ken & Julie Mallette: Lovers, best
             friends, & business partners for over 25 years - and still going
@@ -22,6 +22,7 @@ export default function MeetTheFounders() {
             <br />
             <br /> ~ Ken & Julie
           </div>
+          <img src="THE-HAVEN-summer-2024-804.jpg" className="founderImage" />
         </div>
         <Footer />
       </div>
