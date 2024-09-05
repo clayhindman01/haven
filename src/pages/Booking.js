@@ -6,10 +6,62 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Footer from "../components/Footer";
 import InnerHTML from "dangerously-set-html-content";
+import { ReactPhotoCollage } from "react-photo-collage";
+import useWindowDimensions from "../utils/utils";
 
 export default function Booking() {
-  console.log("testing");
   const bookingWidgetHTML = `<div id="search-widget_IO312PWQ"><script>!function(e,t,a,n,c,r){function s(t){e.console.log("[Guesty Embedded Widget]:",t)}var i,d,l,o,y,m,g,h,p,u;n&&(i=n,d=t.getElementsByTagName("head")[0],(l=t.createElement("link")).rel="stylesheet",l.type="text/css",l.href=i,l.media="all",d.appendChild(l)),o=function(){try{e[a].create(r).catch(function(e){s(e.message)})}catch(e){s(e.message)}},h=!1,y=c,m=function(){h||this.readyState&&"complete"!=this.readyState||(h=!0,o())},(g=t.createElement("script")).type="text/javascript",g.src=y,g.async="true",g.onload=g.onreadystatechange=m,p=g,(u=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,u)}(window,document,"GuestySearchBarWidget","https://s3.amazonaws.com/guesty-frontend-production/search-bar-production.css","https://s3.amazonaws.com/guesty-frontend-production/search-bar-production.js",{"siteUrl":"thehavenwnc.guestybookings.com"});</script></div>`;
+
+  const { height, width } = useWindowDimensions();
+
+  const setting = {
+    width: width > 1000 ? "60%" : "100vw",
+    height: width > 1000 ? ["75vh", "20vh"] : ["25vh", "25vh"],
+    layout: [1, 4],
+    showNumOfRemainingPhotos: true,
+  };
+
+  const cypressSetting = {
+    ...setting,
+    photos: [
+      { source: "THE-HAVEN-summer-2024-10.jpg" },
+      { source: "THE-HAVEN-summer-2024-17.jpg" },
+      { source: "THE-HAVEN-summer-2024-18.jpg" },
+      { source: "THE-HAVEN-summer-2024-23.jpg" },
+      { source: "THE-HAVEN-summer-2024-27.jpg" },
+      { source: "THE-HAVEN-summer-2024-28.jpg" },
+      { source: "THE-HAVEN-summer-2024-40.jpg" },
+      { source: "THE-HAVEN-summer-2024-51.jpg" },
+      { source: "THE-HAVEN-summer-2024-60.jpg" },
+      { source: "THE-HAVEN-summer-2024-70.jpg" },
+      { source: "THE-HAVEN-summer-2024-71.jpg" },
+      { source: "THE-HAVEN-summer-2024-76.jpg" },
+      { source: "THE-HAVEN-summer-2024-83.jpg" },
+      { source: "THE-HAVEN-summer-2024-91.jpg" },
+      { source: "THE-HAVEN-summer-2024-110.jpg" },
+      { source: "THE-HAVEN-summer-2024-119.jpg" },
+      { source: "THE-HAVEN-summer-2024-146.jpg" },
+    ],
+  };
+
+  const spruceSetting = {
+    ...setting,
+    photos: [
+      { source: "THE-HAVEN-summer-2024-491.jpg" },
+      { source: "THE-HAVEN-summer-2024-493.jpg" },
+      { source: "THE-HAVEN-summer-2024-494.jpg" },
+      { source: "THE-HAVEN-summer-2024-498.jpg" },
+      { source: "THE-HAVEN-summer-2024-544.jpg" },
+      { source: "THE-HAVEN-summer-2024-545.jpg" },
+      { source: "THE-HAVEN-summer-2024-549.jpg" },
+      { source: "THE-HAVEN-summer-2024-550.jpg" },
+      { source: "THE-HAVEN-summer-2024-566.jpg" },
+      { source: "THE-HAVEN-summer-2024-581.jpg" },
+      { source: "THE-HAVEN-summer-2024-584.jpg" },
+      { source: "THE-HAVEN-summer-2024-586.jpg" },
+    ],
+  };
+
   return (
     <>
       <Header activeTab="booking" />
@@ -48,120 +100,7 @@ export default function Booking() {
                 </p>
 
                 <div className="center centerPhotos">
-                  <Carousel
-                    axis="horizontal"
-                    autoPlay={true}
-                    dynamicHeight={true}
-                  >
-                    <div>
-                      <img
-                        src="THE-HAVEN-summer-2024-10.jpg"
-                        className="carouselImage"
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="THE-HAVEN-summer-2024-17.jpg"
-                        className="carouselImage"
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="THE-HAVEN-summer-2024-18.jpg"
-                        className="carouselImage"
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="THE-HAVEN-summer-2024-23.jpg"
-                        className="carouselImage"
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="THE-HAVEN-summer-2024-27.jpg"
-                        className="carouselImage"
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="THE-HAVEN-summer-2024-28.jpg"
-                        className="carouselImage"
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="THE-HAVEN-summer-2024-40.jpg"
-                        className="carouselImage"
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="THE-HAVEN-summer-2024-51.jpg"
-                        className="carouselImage"
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="THE-HAVEN-summer-2024-60.jpg"
-                        className="carouselImage"
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="THE-HAVEN-summer-2024-70.jpg"
-                        className="carouselImage"
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="THE-HAVEN-summer-2024-71.jpg"
-                        className="carouselImage"
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="THE-HAVEN-summer-2024-76.jpg"
-                        className="carouselImage"
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="THE-HAVEN-summer-2024-83.jpg"
-                        className="carouselImage"
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="THE-HAVEN-summer-2024-91.jpg"
-                        className="carouselImage"
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="THE-HAVEN-summer-2024-91.jpg"
-                        className="carouselImage"
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="THE-HAVEN-summer-2024-110.jpg"
-                        className="carouselImage"
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="THE-HAVEN-summer-2024-119.jpg"
-                        className="carouselImage"
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="THE-HAVEN-summer-2024-146.jpg"
-                        className="carouselImage"
-                      />
-                    </div>
-                  </Carousel>
+                  <ReactPhotoCollage {...cypressSetting} />
                 </div>
               </div>
             </TabPanel>
@@ -175,84 +114,7 @@ export default function Booking() {
                 </p>
 
                 <div className="center centerPhotos">
-                  <Carousel
-                    axis="horizontal"
-                    autoPlay={true}
-                    dynamicHeight={true}
-                  >
-                    <div>
-                      <img
-                        src="THE-HAVEN-summer-2024-491.jpg"
-                        className="carouselImage"
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="THE-HAVEN-summer-2024-493.jpg"
-                        className="carouselImage"
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="THE-HAVEN-summer-2024-494.jpg"
-                        className="carouselImage"
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="THE-HAVEN-summer-2024-498.jpg"
-                        className="carouselImage"
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="THE-HAVEN-summer-2024-544.jpg"
-                        className="carouselImage"
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="THE-HAVEN-summer-2024-545.jpg"
-                        className="carouselImage"
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="THE-HAVEN-summer-2024-549.jpg"
-                        className="carouselImage"
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="THE-HAVEN-summer-2024-550.jpg"
-                        className="carouselImage"
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="THE-HAVEN-summer-2024-566.jpg"
-                        className="carouselImage"
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="THE-HAVEN-summer-2024-581.jpg"
-                        className="carouselImage"
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="THE-HAVEN-summer-2024-584.jpg"
-                        className="carouselImage"
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="THE-HAVEN-summer-2024-586.jpg"
-                        className="carouselImage"
-                      />
-                    </div>
-                  </Carousel>
+                  <ReactPhotoCollage {...spruceSetting} />
                 </div>
               </div>
             </TabPanel>

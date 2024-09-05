@@ -35,13 +35,6 @@ body {
 };
 
 
-#outer-container {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  width: 100%;
-}
-
 .menuOptions {
   height: 100%;
   display: flex;
@@ -77,7 +70,7 @@ body {
 
 .container {
   flex: 1;
-  background-color: "#eff0ee";
+  background-color: #eff0ee;
   overflow: hidden;
   width: 100%;
   padding-top: 65px;
@@ -184,12 +177,11 @@ body {
   padding: 20px;
   width: 80%;
   margin: 20px;
-  background-color: #f5f5f5;
+  background-color: #eff0ee;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .bookingContainer {
-  background-size: cover;
   height: 100%;
 }
 
@@ -286,6 +278,7 @@ body {
 }
 
 .centerPhotos {
+  padding-bottom: 5rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -293,12 +286,17 @@ body {
   width: 50%;
 }
 
+.css-1cm5myo {
+  width: auto;
+  max-width: 40%;
+}
+
 .photoContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 5rem;
+  padding: 5rem 0rem;
 }
 
 .homeButtonText {
@@ -387,6 +385,18 @@ body {
   padding: 2rem;
   border-radius: 20px;
   box-shadow: 1px 1px 1px gray;
+}
+
+.bookNowButton {
+  margin-right: 4rem;
+  background-color: #1f2e2e;
+  padding: 0.5rem;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px gray;
+}
+
+.bookNowText {
+  font-size: 20px;
 }
 
 .whiteText {
@@ -517,9 +527,17 @@ body {
   padding: 2rem;
   background-color: #1f2e2e;
 }
+ 
 
 .footer-text {
+  margin: 0;
   color: white;
+}
+
+.social-media-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
 }
 
 .react-tabs {
@@ -554,6 +572,7 @@ body {
 }
 
 .react-tabs__tab--selected {
+  color:#6a7773;
   bottom: 0;
 }
 
@@ -651,7 +670,7 @@ body {
 
   .accomodationContainerReversed {
     flex-direction: column-reverse;
-    padding: 80px;
+    padding-bottom: 80px;
   }
 
   .tempBookingText {
@@ -659,6 +678,10 @@ body {
   }
 
   .centerPhotos {
+    width: 100%;
+  }
+
+  .carousel-root {
     width: 100%;
   }
 }
