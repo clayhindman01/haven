@@ -32,7 +32,7 @@ export default function Accomodations() {
           {/* <Fade> */}
           <div className="accomodationTextContainer accomodationTextContainerReversed">
             <p className="homeText">
-              Refresh as you bathe in the glow of the sunset.
+              Recharge with the spectacular morning views
             </p>
           </div>
           {/* </Fade> */}
