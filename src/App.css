@@ -287,8 +287,7 @@ body {
   width: 50%;
 }
 
-.css-1cm5myo {
-  width: auto;
+.fullscreen .react-images__positioner div .react-images__dialog .react-images__container .react-images__pager .react-images__frame .react-images__track .react-images__view-wrapper .react-images__view img {
   max-width: 40%;
 }
 
@@ -613,6 +612,21 @@ body {
   font-weight: bold;
 }
 
+.carousel-root .control-arrow {
+  height: '50%';
+  align-self: center;
+}
+
+.carousel .control-dots {
+  margin-top: 25px;
+}
+
+.carouselVideoPlayer {
+  justify-content: center;
+  align-items: center;
+  width: "60%"
+}
+
 @media (max-width: 1000px) {
   .homeTextContainer {
     width: 100%;
@@ -628,6 +642,12 @@ body {
   .aboutUsButton {
     padding: 1rem;
     width: 50%;
+  }
+
+  .carouselVideoPlayer {
+    justify-content: center;
+    align-items: center;
+    width: "100vh"
   }
 
   .tempBookingText {
@@ -697,5 +717,9 @@ body {
 
   .carousel-root {
     width: 100%;
+  }
+
+  .fullscreen .react-images__positioner div .react-images__dialog .react-images__container .react-images__pager .react-images__frame .react-images__track .react-images__view-wrapper .react-images__view img {
+    max-width: 100%;
   }
 }
