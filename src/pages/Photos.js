@@ -62,62 +62,76 @@ export default function Photos() {
     <>
       <Header activeTab="photos" />
       <div className="container bookingContainer photoContainer">
-        {/* <Carousel className="carouselVideoPlayer" renderIndicator={() => null}>
-          <ReactPlayer
-            url="DELIVERHighlight.m4v"
-            controls={true}
-            width="100%"
-            height="auto"
-          />
-          <ReactPlayer
-            url="DELIVERVillaWalkthrough.m4v"
-            controls={true}
-            width="100%"
-            height="auto"
-          />
-          <ReactPlayer
-            url="DELIVERCypressWalkthrough.m4v"
-            controls={true}
-            width="100%"
-            height="auto"
-          />
-          <ReactPlayer
-            url="DELIVERAdventure.m4v"
-            controls={true}
-            width="100%"
-            height="auto"
-          />
-          <ReactPlayer
-            url="DELIVERNature.m4v"
-            controls={true}
-            width="100%"
-            height="auto"
-          />
-          <ReactPlayer
-            url="DELIVERRelax.m4v"
-            controls={true}
-            width="100%"
-            height="auto"
-          />
-          <ReactPlayer
-            url="DELIVERRomanceVilla.m4v"
-            controls={true}
-            width="100%"
-            height="auto"
-          />
-          <ReactPlayer
-            url="DELIVERRomanceVariety.m4v"
-            controls={true}
-            width="100%"
-            height="auto"
-          />
-          <ReactPlayer
-            url="DELIVERPizzaMaking.m4v"
-            controls={true}
-            width="100%"
-            height="auto"
-          />
-        </Carousel> */}
+        <div className="carouselVideoPlayerContainer">
+          <Carousel
+            className="carouselVideoPlayer"
+            renderIndicator={() => null}
+          >
+            {/* Highlight */}
+            <ReactPlayer
+              url="https://youtu.be/gwnzVJiEtdM"
+              controls={true}
+              width="100%"
+              height="100%"
+            />
+            {/* Spruce Walkthrough */}
+            <ReactPlayer
+              url="https://youtu.be/0DatMY96BEY"
+              controls={true}
+              width="100%"
+              height="100%"
+            />
+            {/* Cypress Walkthrough */}
+            <ReactPlayer
+              url="https://youtu.be/sSlrz2kKyxE?si=Z3W0EXi8zo4v78xC"
+              controls={true}
+              width="100%"
+              height="100%"
+            />
+            {/* Adventure */}
+            <ReactPlayer
+              url="https://youtu.be/Qr53f5d0HXU"
+              controls={true}
+              width="100%"
+              height="100%"
+            />
+            {/* Nature */}
+            <ReactPlayer
+              url="https://youtu.be/9whSt5Ifv2w"
+              controls={true}
+              width="100%"
+              height="100%"
+            />
+            {/* Relax */}
+            <ReactPlayer
+              url="https://youtu.be/3o5U2TG-Bws"
+              controls={true}
+              width="100%"
+              height="100%"
+            />
+            {/* Romance Villa */}
+            <ReactPlayer
+              url="https://youtu.be/oDstOO9Pbmk"
+              controls={true}
+              width="100%"
+              height="100%"
+            />
+            {/* Romance Variety */}
+            <ReactPlayer
+              url="https://youtu.be/qjPQEyP8I5w"
+              controls={true}
+              width="100%"
+              height="100%"
+            />
+            {/* Pizza Making */}
+            <ReactPlayer
+              url="https://youtu.be/s9mzSXaZkjY"
+              controls={true}
+              width="100%"
+              height="100%"
+            />
+          </Carousel>
+        </div>
 
         <ReactPhotoCollage {...setting} />
       </div>

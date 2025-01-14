@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
-import { Carousel } from "react-responsive-carousel";
+import ReactWeather, { useOpenWeather } from "react-open-weather";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Footer from "../components/Footer";
 import InnerHTML from "dangerously-set-html-content";
 import { ReactPhotoCollage } from "react-photo-collage";
 import useWindowDimensions from "../utils/utils";
+import axios from "axios";
 
 export default function Booking() {
   const bookingWidgetHTML = `<div id="search-widget_IO312PWQ"><script>!function(e,t,a,n,c,r){function s(t){e.console.log("[Guesty Embedded Widget]:",t)}var i,d,l,o,y,m,g,h,p,u;n&&(i=n,d=t.getElementsByTagName("head")[0],(l=t.createElement("link")).rel="stylesheet",l.type="text/css",l.href=i,l.media="all",d.appendChild(l)),o=function(){try{e[a].create(r).catch(function(e){s(e.message)})}catch(e){s(e.message)}},h=!1,y=c,m=function(){h||this.readyState&&"complete"!=this.readyState||(h=!0,o())},(g=t.createElement("script")).type="text/javascript",g.src=y,g.async="true",g.onload=g.onreadystatechange=m,p=g,(u=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,u)}(window,document,"GuestySearchBarWidget","https://s3.amazonaws.com/guesty-frontend-production/search-bar-production.css","https://s3.amazonaws.com/guesty-frontend-production/search-bar-production.js",{"siteUrl":"thehavenwnc.guestybookings.com"});</script></div>`;
@@ -19,6 +20,46 @@ export default function Booking() {
     height: width > 1000 ? ["75vh", "20vh"] : ["25vh", "25vh"],
     layout: [1, 4],
     showNumOfRemainingPhotos: true,
+  };
+
+  const [data, setData] = useState(null);
+  const API_KEY = "cc66275139f3a703365d5c0e198fe594";
+
+  useEffect(() => {
+    const url = `https://api.openweathermap.org/data/3.0/onecall?appid=${API_KEY}&lang=en&units=imperial&lat=35.533100&lon=-82.911700`;
+    axios.get(url).then((res) => {
+      const date = new Date(res.data.current.dt);
+      setData({
+        forecast: [
+          {
+            date:
+              date.getDate() +
+              " " +
+              date.toLocaleDateString("en-US", { weekday: "long" }),
+            description: "Clear",
+            icon: "SVG PATH",
+            temperature: { min: "-0", max: "6" },
+            wind: "2",
+            humidity: 60,
+          },
+        ],
+        current: {
+          date:
+            date.getDate() +
+            " " +
+            date.toLocaleDateString("en-US", { weekday: "long" }),
+          description: "Clear",
+          icon: "SVG PATH",
+          temperature: { current: Math.round(res.data.current.temp) },
+          wind: res.data.current.wind_speed,
+          humidity: res.data.current.humidity,
+        },
+      });
+    });
+  }, []);
+
+  const handleClick = () => {
+    window.open("https://VisitHaywood.com");
   };
 
   const cypressSetting = {
@@ -90,6 +131,9 @@ export default function Booking() {
               <Tab>
                 <p className="homeText">Always Included</p>
               </Tab>
+              <Tab>
+                <p className="homeText">Enhancements and Info</p>
+              </Tab>
             </TabList>
 
             <TabPanel>
@@ -130,11 +174,14 @@ export default function Booking() {
                   <li className="vipList">S'mores</li>
                   <li className="vipList">Hot Chocolate</li>
                 </ul>
+              </div>
+            </TabPanel>
 
-                <p className="homeText">Additional Add Ons:</p>
+            <TabPanel>
+              <div className="center accomodationsBackground">
                 <div className="homeText flexCenter">
-                  <p style={{ margin: 0 }}>
-                    <span style={{ fontWeight: 400 }}>
+                  <p style={{ margin: 30 }}>
+                    <span style={{ fontWeight: 400 }} className="homeText">
                       Special Romance Package
                     </span>
                     &nbsp;- $100
@@ -144,8 +191,25 @@ export default function Booking() {
                     and flameless candles around the hot tub and villa and a
                     bottle of bubbly champagne just waiting for you to pop open!
                   </p>
+                  <p className="homeText" style={{ fontWeight: 400 }}>
+                    Local Info:
+                  </p>
+                  <p
+                    style={{ width: "60%", marginTop: 1 }}
+                    onClick={handleClick}
+                  >
+                    VisitHaywood.com
+                  </p>
+                  {data && (
+                    <ReactWeather
+                      data={data}
+                      lang="en"
+                      locationLabel="Clyde, NC"
+                      unitsLabels={{ temperature: "F", windSpeed: "Mi/h" }}
+                      showForcast={false}
+                    />
+                  )}
                 </div>
-                <div className="center centerPhotos"></div>
               </div>
             </TabPanel>
           </Tabs>

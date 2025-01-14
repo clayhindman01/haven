@@ -624,10 +624,30 @@ body {
 .carouselVideoPlayer {
   justify-content: center;
   align-items: center;
-  width: "60%"
+  width: "60%";
+}
+
+.carouselVideoPlayer .carousel-slider .slider-wrapper .slider .selected {
+  height: 75vh;
+}
+
+.carouselVideoPlayerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 1000px) {
+  .carouselVideoPlayer {
+    justify-content: center;
+    align-items: center;
+    width: "50vw";
+  }
+  
+  .carouselVideoPlayer .carousel-slider .slider-wrapper .slider .selected {
+    height: 100vh;
+  }
+
   .homeTextContainer {
     width: 100%;
     margin: 0;
