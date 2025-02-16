@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
-import ReactWeather, { useOpenWeather } from "react-open-weather";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Footer from "../components/Footer";
 import InnerHTML from "dangerously-set-html-content";
 import { ReactPhotoCollage } from "react-photo-collage";
 import useWindowDimensions from "../utils/utils";
-import axios from "axios";
+
+import ShopComponent from "../components/ShopComponent";
 
 export default function Booking() {
   const bookingWidgetHTML = `<div id="search-widget_IO312PWQ"><script>!function(e,t,a,n,c,r){function s(t){e.console.log("[Guesty Embedded Widget]:",t)}var i,d,l,o,y,m,g,h,p,u;n&&(i=n,d=t.getElementsByTagName("head")[0],(l=t.createElement("link")).rel="stylesheet",l.type="text/css",l.href=i,l.media="all",d.appendChild(l)),o=function(){try{e[a].create(r).catch(function(e){s(e.message)})}catch(e){s(e.message)}},h=!1,y=c,m=function(){h||this.readyState&&"complete"!=this.readyState||(h=!0,o())},(g=t.createElement("script")).type="text/javascript",g.src=y,g.async="true",g.onload=g.onreadystatechange=m,p=g,(u=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,u)}(window,document,"GuestySearchBarWidget","https://s3.amazonaws.com/guesty-frontend-production/search-bar-production.css","https://s3.amazonaws.com/guesty-frontend-production/search-bar-production.js",{"siteUrl":"thehavenwnc.guestybookings.com"});</script></div>`;
@@ -22,44 +22,8 @@ export default function Booking() {
     showNumOfRemainingPhotos: true,
   };
 
-  const [data, setData] = useState(null);
-  const API_KEY = "cc66275139f3a703365d5c0e198fe594";
-
-  useEffect(() => {
-    const url = `https://api.openweathermap.org/data/3.0/onecall?appid=${API_KEY}&lang=en&units=imperial&lat=35.533100&lon=-82.911700`;
-    axios.get(url).then((res) => {
-      const date = new Date(res.data.current.dt);
-      setData({
-        forecast: [
-          {
-            date:
-              date.getDate() +
-              " " +
-              date.toLocaleDateString("en-US", { weekday: "long" }),
-            description: "Clear",
-            icon: "SVG PATH",
-            temperature: { min: "-0", max: "6" },
-            wind: "2",
-            humidity: 60,
-          },
-        ],
-        current: {
-          date:
-            date.getDate() +
-            " " +
-            date.toLocaleDateString("en-US", { weekday: "long" }),
-          description: "Clear",
-          icon: "SVG PATH",
-          temperature: { current: Math.round(res.data.current.temp) },
-          wind: res.data.current.wind_speed,
-          humidity: res.data.current.humidity,
-        },
-      });
-    });
-  }, []);
-
-  const handleClick = () => {
-    window.open("https://VisitHaywood.com");
+  const handleClick = (link) => {
+    window.open(link);
   };
 
   const cypressSetting = {
@@ -123,16 +87,16 @@ export default function Booking() {
           <Tabs>
             <TabList>
               <Tab>
-                <p className="homeText">The Cypress</p>
+                <p className="homeText tab">The Cypress</p>
               </Tab>
               <Tab>
-                <p className="homeText">The Spruce</p>
+                <p className="homeText tab">The Spruce</p>
               </Tab>
               <Tab>
-                <p className="homeText">Always Included</p>
+                <p className="homeText tab">Always Included</p>
               </Tab>
               <Tab>
-                <p className="homeText">Enhancements and Info</p>
+                <p className="homeText tab">Plan Your Experience</p>
               </Tab>
             </TabList>
 
@@ -179,36 +143,118 @@ export default function Booking() {
 
             <TabPanel>
               <div className="center accomodationsBackground">
-                <div className="homeText flexCenter">
-                  <p style={{ margin: 30 }}>
+                <div className="flexCenter">
+                  {/* <p style={{ margin: 30 }}>
                     <span style={{ fontWeight: 400 }} className="homeText">
                       Special Romance Package
                     </span>
                     &nbsp;- $100
                   </p>
-                  <p style={{ width: "60%", marginTop: 1 }}>
+                  <p style={{ width: "60%", marginTop: 1, fontSize: "30px" }}>
                     Step into the perfect romantic setting with flower petals
                     and flameless candles around the hot tub and villa and a
                     bottle of bubbly champagne just waiting for you to pop open!
-                  </p>
+                  </p> */}
                   <p className="homeText" style={{ fontWeight: 400 }}>
                     Local Info:
                   </p>
-                  <p
-                    style={{ width: "60%", marginTop: 1 }}
-                    onClick={handleClick}
-                  >
-                    VisitHaywood.com
-                  </p>
-                  {data && (
-                    <ReactWeather
-                      data={data}
-                      lang="en"
-                      locationLabel="Clyde, NC"
-                      unitsLabels={{ temperature: "F", windSpeed: "Mi/h" }}
-                      showForcast={false}
-                    />
-                  )}
+
+                  <ul className="linkList">
+                    <li>
+                      <p className="linkListText">
+                        Discover the vibrant offerings of Haywood County, North
+                        Carolina, through{" "}
+                        <span
+                          onClick={() =>
+                            handleClick("https://visithaywood.com/")
+                          }
+                          className="underline"
+                        >
+                          Visit Haywood
+                        </span>
+                        . Explore a variety of shopping destinations, from
+                        unique boutiques to charming local shops. Immerse
+                        yourself in the rich arts scene by visiting numerous art
+                        galleries and theaters, such as the Haywood Arts
+                        Regional Theatre (HART), which showcases local talent
+                        and cultural heritage. For outdoor enthusiasts, the
+                        county boasts scenic hiking trails, picturesque
+                        waterfalls, and opportunities for horseback riding.
+                        Don't miss the chance to experience live music and
+                        entertainment at various venues and festivals throughout
+                        the year. Plan your visit to align with local events and
+                        festivals to fully experience the community's vibrant
+                        spirit.
+                      </p>
+                    </li>
+                    <li>
+                      <p className="linkListText">
+                        For the latest information on driving conditions, road
+                        closures, and openings in North Carolina, visit{" "}
+                        <span
+                          className="underline"
+                          onClick={() => handleClick("https://drivenc.gov")}
+                        >
+                          drivenc.gov
+                        </span>
+                        . This official real-time traffic and travel information
+                        platform provides details about road closures,
+                        accidents, congestion, and work zones.
+                      </p>
+                    </li>
+                    <li>
+                      <p className="linkListText">
+                        Visit{" "}
+                        <span
+                          className="underline"
+                          onClick={() => handleClick("https://nps.gov/grsm")}
+                        >
+                          nps.gov/grsm
+                        </span>{" "}
+                        for everything you need to know about the Great Smoky
+                        Mountains National Park. Discover hiking trails, scenic
+                        drives, wildlife, historic sites, and tips for planning
+                        your visit to America’s most visited national park.
+                      </p>
+                    </li>
+                    <li>
+                      <p className="linkListText">
+                        Explore{" "}
+                        <span
+                          className="underline"
+                          onClick={() =>
+                            handleClick("https://www.blueridgeparkway.org")
+                          }
+                        >
+                          www.blueridgeparkway.org
+                        </span>{" "}
+                        for everything you need to plan your journey along the
+                        Blue Ridge Parkway. Find information on scenic
+                        overlooks, hiking trails, attractions, dining, and
+                        events along America’s favorite drive.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p className="linkListText">
+                        Check out{" "}
+                        <span
+                          className="underline"
+                          onClick={() =>
+                            handleClick("https://www.maxpatch.org")
+                          }
+                        >
+                          www.maxpatch.org
+                        </span>{" "}
+                        for details about the Max Patch Recreation Area. Learn
+                        about this picturesque mountain bald, its hiking trails,
+                        breathtaking panoramic views, and guidelines for
+                        preserving this natural treasure.
+                      </p>
+                    </li>
+                  </ul>
+
+                  <ShopComponent />
                 </div>
               </div>
             </TabPanel>

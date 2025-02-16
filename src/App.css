@@ -95,6 +95,29 @@ body {
   height: 0vh;
 } */
 
+.weatherContainer {
+  position: absolute;
+  left: 10px;
+  top: 75px;
+}
+
+.rw-container .rw-forecast-days-panel {
+  display: none;
+  border: none
+}
+
+.rw-container .rw-container-main .rw-container-right {
+  display: none;
+}
+
+.rw-container .rw-container-main .rw-container-left .rw-today .rw-today-hr {
+  display: none;
+}
+
+.rw-container .rw-container-main .rw-container-left .rw-today .rw-today-info {
+  display: none;
+}
+
 .centerJustify {
   display: flex;
   justify-content: center;
@@ -350,9 +373,22 @@ body {
 }
 
 .accomodationsCabinImage {
-  width: 30%;
+  width: 100%;
   z-index: -1;
 }
+
+.accomodationsCabinImageContainer {
+  width: 600px;
+  height: 740px;
+  overflow: hidden;
+}
+
+.accomodationsCabinImageContainerHorizontal {
+  height: 500px;
+  width: 1000px;
+  overflow: hidden;
+}
+
 
 .accomodationsContainerReversed {
   display:flex;
@@ -367,16 +403,17 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding-top: 15rem;  
   width: 100%;
+  padding: 25px 0;
 }
 
 .accomodationTextContainer {
   width: 40%;
-  margin-top: -10%;
-  /* margin-left: -3%; */
   padding: 2rem 0rem;
-  /* background-color: #eff0ee; */
+}
+
+.rw-container-right {
+  display: none;
 }
 
 .view-accomodations-container {
@@ -441,8 +478,12 @@ body {
 }
 
 .accomodationsCabinImage {
-  margin-top: -10rem;
-  box-shadow: 3px 3px 3px gray;
+  margin-top: -8rem;
+  transition: transition 5s;
+}
+
+.accomodationsCabinImage:hover {
+  transform: scale(1.075);
 }
 
 .photosTileContainer {
@@ -637,11 +678,121 @@ body {
   align-items: center;
 }
 
+.linkList {
+  width: 60%;
+}
+
+.linkListText {
+  font-size: 22px;
+}
+
+.underline {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.shop {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 40px;
+  bottom: 40px;
+  width: 55px;
+  height: 55px;
+  background-color: #406c4c;
+  border-radius: 100px;
+  box-shadow: 1px 1px 1px gray;
+  cursor: pointer;
+}
+
+.shop:hover {
+
+}
+
+.reviewContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  /* /* border: 1px solid #4b5351; */
+  /* box-shadow: 1px 1px 1px gray; */
+  border-radius: 10px;
+  padding: 25px;
+  margin-right: 10px;
+  flex-shrink: 0;
+  max-width: 400px;
+  text-align: center;
+}
+
+.reviewContainer:hover {
+  box-shadow: inset 0 0 3px gray;
+}
+
+.moving-list-container {
+  width: 100%;
+  padding-top: 60px;
+  overflow: hidden; /* Hide overflowing items */
+}
+
+.moving-list {
+  display: flex;
+  animation: moveList 30s linear infinite; /* Adjust duration as needed */
+}
+
+.moving-list-item {
+  flex-shrink: 0; /* Prevent items from shrinking */
+  /* width: 100px; Adjust item width as needed */
+  margin-right: 20px; /* Adjust spacing between items */
+}
+
+@keyframes moveList {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-88%); /* Move the list by its total width */
+  }
+}
+
 @media (max-width: 1000px) {
+
+  .linkList {
+    width: 100%;
+  }
+
+  .weatherContainer {
+    position: inherit;
+    padding: 2.5%;
+    background-color: #eff0ee;
+    width: 95%;
+    height: 95%;
+  }
+
   .carouselVideoPlayer {
     justify-content: center;
     align-items: center;
     width: "50vw";
+  }
+
+  .reviewContainer {
+    max-width: 250px;
+  }
+  
+
+  .moving-list {
+    display: flex;
+    animation: moveList 30s linear infinite; /* Adjust duration as needed */
+  }
+
+  @keyframes moveList {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-538%); /* Move the list by its total width */
+    }
   }
   
   .carouselVideoPlayer .carousel-slider .slider-wrapper .slider .selected {
@@ -656,7 +807,12 @@ body {
 
   .homeText {
     padding: 1rem;
-    font-size: 25px;
+    margin: 0;
+    font-size: 20px;
+  }
+
+  .tab {
+    padding: 1rem 0.5rem;
   }
 
   .aboutUsButton {
@@ -674,13 +830,27 @@ body {
     font-size: 25px;
   }
 
-  /* .accomodationsCabinImage {
-    display: none;
-  } */
+  .accomodationsSection {
+    /* padding-top: 15rem; */
+  }
 
   .accomodationsCabinImage {
     width: 100%;
   } 
+
+  .accomodationsCabinImageContainer {
+    width: 100%;
+    height: 100%;
+  }
+
+  .accomodationsCabinImage:hover {
+    transform: none;
+  }
+
+  .accomodationsCabinImageContainerHorizontal {
+    width: 100%;
+    height: 100%;
+  }
 
   .founderCon {
     flex-direction: column;

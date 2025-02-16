@@ -1,7 +1,50 @@
 import React from "react";
 import { Fade } from "react-reveal";
+import Review from "./Review";
 
 export default function Accomodations() {
+  const reviewData = [
+    {
+      name: "Gerret",
+      location: "Clearwater, FL",
+      text: "10/10! Even more beautiful than the pictures!",
+    },
+    {
+      name: "Damien",
+      location: "High Point, NC",
+      text: "Amazing Stay! Stunning mountain views, comfortable bed, and great amenities. Can't wait to return!",
+    },
+    {
+      name: "Moira",
+      location: "Kalamazoo, MI",
+      text: "Peaceful and beautiful. Stunning views, great aesthetic, and well-stocked kitchen. A must-visit!",
+    },
+    {
+      name: "Kelly",
+      location: "Commack, NY",
+      text: "An amazing getaway! One of my favorite places—does not disappoint!",
+    },
+    {
+      name: "Josh",
+      location: "Bloomington, IN",
+      text: "Breathtaking views and cozy touches. Perfect for a romantic, relaxing escape.",
+    },
+    {
+      name: "Keith",
+      location: "Columbus, OH",
+      text: "An unforgettable gem! Perfectly private, peaceful, with incredible hospitality. Highly recommended!",
+    },
+    {
+      name: "Gina",
+      location: "Cleveland, GA",
+      text: "Breathtaking scenery and thoughtful extras like pizza, wine, and s'mores. I wish we could’ve stayed longer!",
+    },
+    {
+      name: "Annabella",
+      location: "Miami, FL",
+      text: "Beautiful and serene. Spectacular views and cozy vibes—I didn’t want to leave!",
+    },
+  ];
   return (
     <div className="homeAboutSectionContainer">
       <Fade>
@@ -14,10 +57,12 @@ export default function Accomodations() {
           leave rejuvenated and refreshed.
         </p>
         <div className="accomodationsSection">
-          <img
-            src="THE-HAVEN-summer-2024-663.jpg"
-            className="accomodationsCabinImage"
-          ></img>
+          <div className="accomodationsCabinImageContainer">
+            <img
+              src="THE-HAVEN-summer-2024-663.jpg"
+              className="accomodationsCabinImage"
+            ></img>
+          </div>
 
           {/* <Fade> */}
           <div className="accomodationTextContainer">
@@ -36,18 +81,21 @@ export default function Accomodations() {
             </p>
           </div>
           {/* </Fade> */}
-
-          <img
-            src="THE-HAVEN-summer-2024-171.jpg"
-            className="accomodationsCabinImage accomodationsCabinImageReversed"
-          ></img>
+          <div className="accomodationsCabinImageContainerHorizontal">
+            <img
+              src="THE-HAVEN-summer-2024-171.jpg"
+              className="accomodationsCabinImage accomodationsCabinImageReversed"
+            ></img>
+          </div>
         </div>
 
         <div className="accomodationsSection">
-          <img
-            src="THE-HAVEN-summer-2024-343.jpg"
-            className="accomodationsCabinImage"
-          ></img>
+          <div className="accomodationsCabinImageContainer">
+            <img
+              src="THE-HAVEN-summer-2024-343.jpg"
+              className="accomodationsCabinImage"
+            ></img>
+          </div>
 
           {/* <Fade> */}
           <div className="accomodationTextContainer">
@@ -56,6 +104,28 @@ export default function Accomodations() {
           {/* </Fade> */}
         </div>
       </Fade>
+
+      {/* <div className="scrollingReviews">
+        <Review
+          text="10/10! Even more beautiful than the pictures!"
+          name="Gerret"
+          location="Clearwater, FL"
+        />
+      </div> */}
+
+      <div className="moving-list-container">
+        <div className="moving-list">
+          {reviewData.map((item, index) => (
+            <Review
+              name={item.name}
+              location={item.location}
+              text={item.text}
+              key={index}
+              className="moving-list-item"
+            />
+          ))}
+        </div>
+      </div>
 
       <div className="view-accomodations-container">
         <a href="/booking" className="homeText whiteText">
