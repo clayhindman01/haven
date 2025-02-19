@@ -57,9 +57,9 @@ export default function Accomodations() {
           leave rejuvenated and refreshed.
         </p>
         <div className="accomodationsSection">
-          <div className="accomodationsCabinImageContainer">
+          <div className="accomodationsCabinImageContainerHorizontal">
             <img
-              src="THE-HAVEN-summer-2024-663.jpg"
+              src="wildwood-media-cabin2.jpg"
               className="accomodationsCabinImage"
             ></img>
           </div>
@@ -83,16 +83,16 @@ export default function Accomodations() {
           {/* </Fade> */}
           <div className="accomodationsCabinImageContainerHorizontal">
             <img
-              src="THE-HAVEN-summer-2024-171.jpg"
+              src="wildwood-media-cabin16.jpg"
               className="accomodationsCabinImage accomodationsCabinImageReversed"
             ></img>
           </div>
         </div>
 
         <div className="accomodationsSection">
-          <div className="accomodationsCabinImageContainer">
+          <div className="accomodationsCabinImageContainerHorizontal">
             <img
-              src="THE-HAVEN-summer-2024-343.jpg"
+              src="wildwood-media-lifestyle117.jpg"
               className="accomodationsCabinImage"
             ></img>
           </div>
